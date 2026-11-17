@@ -44,7 +44,7 @@ export function ServicesPreview() {
         <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4" role="list">
           {SERVICE_AREAS.map((a, i) => (
             <Reveal as="li" key={a.title} delay={0.06 * i} className="h-full">
-              <ServiceTile title={a.title} description={a.description} href={a.href} icon={a.icon} index={i} />
+              <ServiceTile title={a.title} description={a.description} href={a.href} icon={a.icon} />
             </Reveal>
           ))}
         </ul>

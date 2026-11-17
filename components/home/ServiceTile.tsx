@@ -15,13 +15,11 @@ export function ServiceTile({
   description,
   href,
   icon,
-  index,
 }: {
   title: string;
   description: string;
   href: string;
   icon: IconName;
-  index: number;
 }) {
   const onPointerMove = (e: PointerEvent<HTMLAnchorElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
@@ -57,9 +55,6 @@ export function ServiceTile({
             className="absolute inset-0 rounded-2xl ring-2 ring-cyan-300/50 transition-all duration-700 group-hover:scale-[1.35] group-hover:opacity-0"
           />
           <Icon name={icon} className="h-7 w-7" strokeWidth={1.6} />
-        </span>
-        <span className="font-display text-sm font-semibold text-cyan-300/70" aria-hidden="true">
-          0{index + 1}
         </span>
       </div>
 
