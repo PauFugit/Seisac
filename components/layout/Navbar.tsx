@@ -89,8 +89,8 @@ export function Navbar() {
       >
         Saltar al contenido
       </a>
-      <Container as="nav" className="flex h-[72px] items-center justify-between gap-6 lg:h-20">
-        <Logo tone="light" />
+      <Container as="nav" className="flex h-20 items-center justify-between gap-4 sm:h-[88px] lg:h-24 lg:gap-6">
+        <Logo tone="light" size="lg" />
 
         <ul className="hidden items-center gap-1 md:flex" role="list">
           {NAV_LINKS.map((l) => {
@@ -125,7 +125,7 @@ export function Navbar() {
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={buttonClasses("whatsapp", "sm", "max-sm:hidden")}
+            className={buttonClasses("whatsapp", "sm", "max-sm:hidden md:max-lg:hidden")}
           >
             <WhatsAppIcon className="h-4 w-4" />
             Cotiza por WhatsApp
@@ -156,7 +156,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
-            className="h-[calc(100dvh-72px)] overflow-y-auto border-t border-white/10 bg-navy-900/95 backdrop-blur-xl md:hidden"
+            className="h-[calc(100dvh-80px)] sm:h-[calc(100dvh-88px)] overflow-y-auto border-t border-white/10 bg-navy-900/95 backdrop-blur-xl md:hidden"
           >
             <Container className="flex flex-col gap-2 py-8">
               {NAV_LINKS.map((l) => (

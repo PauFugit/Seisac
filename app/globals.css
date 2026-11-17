@@ -180,3 +180,22 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Tarjetas "Qué hacemos": borde cyan siempre visible, degradado completo en hover */
+.service-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(160deg, rgb(111 211 236 / 0.55), rgb(111 211 236 / 0.12) 45%, rgb(11 111 184 / 0.35));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: background 0.5s var(--ease-signal);
+}
+.service-tile:hover::after,
+.service-tile:focus-visible::after {
+  background: linear-gradient(160deg, var(--color-cyan-400), var(--color-blue-500) 50%, var(--color-signal-500));
+}
