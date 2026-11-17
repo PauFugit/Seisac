@@ -33,7 +33,7 @@ export function ServiceTile({
     <Link
       href={href}
       onPointerMove={onPointerMove}
-      className="service-tile group relative isolate flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-[#16457f] via-navy-800 to-navy-900 p-6 shadow-[0_24px_50px_-24px_rgb(0_0_0/0.75),inset_0_1px_0_rgb(255_255_255/0.08)] transition-all duration-500 ease-[var(--ease-signal)] hover:-translate-y-2 hover:shadow-[0_32px_60px_-24px_rgb(31_181_217/0.45),inset_0_1px_0_rgb(255_255_255/0.12)]"
+      className="service-tile group relative isolate flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-b from-[#1F4A78] via-navy-800 to-navy-900 p-6 shadow-[0_24px_50px_-24px_rgb(0_0_0/0.75),inset_0_1px_0_rgb(255_255_255/0.08)] transition-all duration-500 ease-[var(--ease-signal)] hover:-translate-y-2 hover:shadow-[0_32px_60px_-24px_rgb(7_150_199/0.45),inset_0_1px_0_rgb(255_255_255/0.12)]"
     >
       {/* Foco de luz que sigue al cursor */}
       <span
@@ -41,7 +41,7 @@ export function ServiceTile({
         className="pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
           background:
-            "radial-gradient(280px circle at var(--x, 50%) var(--y, 0%), rgb(31 181 217 / 0.22), transparent 65%)",
+            "radial-gradient(280px circle at var(--x, 50%) var(--y, 0%), rgb(7 150 199 / 0.22), transparent 65%)",
         }}
       />
       {/* Línea de acento superior */}
@@ -51,7 +51,7 @@ export function ServiceTile({
       />
 
       <div className="flex items-start justify-between">
-        <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-brand-gradient text-white shadow-[0_10px_28px_-8px_rgb(31_181_217/0.7)] ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105">
+        <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-brand-gradient text-white shadow-[0_10px_28px_-8px_rgb(7_150_199/0.7)] ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105">
           <span
             aria-hidden="true"
             className="absolute inset-0 rounded-2xl ring-2 ring-cyan-300/50 transition-all duration-700 group-hover:scale-[1.35] group-hover:opacity-0"

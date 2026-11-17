@@ -25,10 +25,10 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-blue-600 text-white shadow-[0_8px_24px_-10px_rgb(11_111_184/0.7)] hover:bg-blue-500 hover:shadow-[0_12px_28px_-10px_rgb(10_132_198/0.8)] hover:-translate-y-0.5",
+    "bg-blue-600 text-white shadow-[0_8px_24px_-10px_rgb(7_82_138/0.7)] hover:bg-blue-500 hover:shadow-[0_12px_28px_-10px_rgb(10_99_163/0.8)] hover:-translate-y-0.5",
   // Verde de señal con texto navy (contraste AA ≈ 8:1)
   whatsapp:
-    "bg-signal-500 text-navy-900 shadow-[0_8px_24px_-10px_rgb(108_194_74/0.8)] hover:bg-signal-400 hover:-translate-y-0.5",
+    "bg-signal-500 text-navy-900 shadow-[0_8px_24px_-10px_rgb(54_182_74/0.8)] hover:bg-signal-400 hover:-translate-y-0.5",
   outline:
     "border border-blue-600/30 text-blue-600 hover:border-blue-600 hover:bg-blue-600/5",
   "ghost-light":

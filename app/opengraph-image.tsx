@@ -15,7 +15,7 @@ export default function OpengraphImage() {
           height: "100%",
           display: "flex",
           position: "relative",
-          background: "linear-gradient(135deg, #0B2545 0%, #123E73 60%, #0B6FB8 100%)",
+          background: "linear-gradient(135deg, #18334F 0%, #224A73 60%, #07528A 100%)",
           fontFamily: "sans-serif",
           overflow: "hidden",
         }}
@@ -30,7 +30,7 @@ export default function OpengraphImage() {
               width: r * 2,
               height: r * 2,
               borderRadius: "50%",
-              border: "2px solid rgba(111,211,236,0.22)",
+              border: "2px solid rgba(92,195,230,0.22)",
             }}
           />
         ))}
@@ -44,21 +44,21 @@ export default function OpengraphImage() {
                 strokeWidth="4.5"
                 strokeLinejoin="round"
               />
-              <path d="M16.4 30.4a22 22 0 0 1 31.2 0" fill="none" stroke="#6FD3EC" strokeWidth="4.5" strokeLinecap="round" />
-              <path d="M21.4 35.4a15 15 0 0 1 21.2 0" fill="none" stroke="#6FD3EC" strokeWidth="4.5" strokeLinecap="round" />
-              <path d="M26.3 40.3a8 8 0 0 1 11.4 0" fill="none" stroke="#6FD3EC" strokeWidth="4.5" strokeLinecap="round" />
-              <circle cx="32" cy="48.5" r="3.8" fill="#6CC24A" />
+              <path d="M16.4 30.4a22 22 0 0 1 31.2 0" fill="none" stroke="#5CC3E6" strokeWidth="4.5" strokeLinecap="round" />
+              <path d="M21.4 35.4a15 15 0 0 1 21.2 0" fill="none" stroke="#5CC3E6" strokeWidth="4.5" strokeLinecap="round" />
+              <path d="M26.3 40.3a8 8 0 0 1 11.4 0" fill="none" stroke="#5CC3E6" strokeWidth="4.5" strokeLinecap="round" />
+              <circle cx="32" cy="48.5" r="3.8" fill="#36B64A" />
             </svg>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ display: "flex", fontSize: 104, fontWeight: 800, color: "#fff", letterSpacing: -3 }}>
-                SEIS<span style={{ color: "#1FB5D9" }}>AC</span>
+                SEIS<span style={{ color: "#0796C7" }}>AC</span>
               </div>
               <div style={{ fontSize: 22, letterSpacing: 6, color: "#D9E2EC" }}>TELECOMUNICACIONES Y SEGURIDAD</div>
             </div>
           </div>
           <div style={{ marginTop: 56, fontSize: 40, color: "#fff", fontWeight: 600 }}>{SITE.slogan}</div>
           <div style={{ marginTop: 18, display: "flex", alignItems: "center", gap: 14, fontSize: 26, color: "#D9E2EC" }}>
-            <div style={{ width: 14, height: 14, borderRadius: 7, background: "#6CC24A" }} />
+            <div style={{ width: 14, height: 14, borderRadius: 7, background: "#36B64A" }} />
             Redes · Cámaras de seguridad · Control de accesos · Servicio a domicilio
           </div>
         </div>

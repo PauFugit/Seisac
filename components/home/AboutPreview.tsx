@@ -71,7 +71,7 @@ export function AboutPreview() {
             className="absolute left-1/2 top-1/2 -z-0 h-[140%] w-[140%] -translate-x-1/2 -translate-y-1/2 opacity-70"
             rings={6}
           />
-          <div className="relative mx-auto aspect-[64/72] w-full max-w-[420px] drop-shadow-[0_40px_60px_rgb(11_37_69/0.28)]">
+          <div className="relative mx-auto aspect-[64/72] w-full max-w-[420px] drop-shadow-[0_40px_60px_rgb(24_51_79/0.28)]">
             <div className="clip-shield absolute inset-0 overflow-hidden bg-navy-900">
               {ABOUT_IMAGE ? (
                 <>

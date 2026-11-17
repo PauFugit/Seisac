@@ -72,9 +72,9 @@ export async function POST(req: Request) {
   ];
 
   const html = `
-  <div style="font-family:Inter,Arial,sans-serif;max-width:600px;margin:0 auto;color:#0B2545">
-    <div style="background:#0B2545;padding:24px 28px;border-radius:12px 12px 0 0">
-      <p style="margin:0;color:#6FD3EC;font-size:11px;letter-spacing:3px;text-transform:uppercase">Nuevo contacto web</p>
+  <div style="font-family:Inter,Arial,sans-serif;max-width:600px;margin:0 auto;color:#18334F">
+    <div style="background:#18334F;padding:24px 28px;border-radius:12px 12px 0 0">
+      <p style="margin:0;color:#5CC3E6;font-size:11px;letter-spacing:3px;text-transform:uppercase">Nuevo contacto web</p>
       <h1 style="margin:8px 0 0;color:#fff;font-size:20px">${escapeHtml(data.name)} · ${escapeHtml(data.serviceType)}</h1>
     </div>
     <div style="border:1px solid #D9E2EC;border-top:0;padding:24px 28px;border-radius:0 0 12px 12px">
@@ -89,7 +89,7 @@ export async function POST(req: Request) {
       <p style="margin:20px 0 6px;color:#475569;font-size:13px">Mensaje</p>
       <p style="margin:0;white-space:pre-wrap;font-size:15px;line-height:1.6">${escapeHtml(data.message)}</p>
       <p style="margin:24px 0 0">
-        <a href="https://wa.me/${normalizeChileanPhone(data.phone)!.replace("+", "")}" style="display:inline-block;background:#6CC24A;color:#0B2545;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none">Responder por WhatsApp</a>
+        <a href="https://wa.me/${normalizeChileanPhone(data.phone)!.replace("+", "")}" style="display:inline-block;background:#36B64A;color:#18334F;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none">Responder por WhatsApp</a>
       </p>
     </div>
   </div>`;

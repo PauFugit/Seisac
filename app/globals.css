@@ -4,16 +4,16 @@
    Tokens de marca SEISAC (colores tomados del logo)
    ------------------------------------------------------------------ */
 @theme {
-  --color-navy-950: #071a33;
-  --color-navy-900: #0b2545;
-  --color-navy-800: #0e3060;
-  --color-navy-700: #123e73;
-  --color-blue-600: #0b6fb8;
-  --color-blue-500: #0a84c6;
-  --color-cyan-400: #1fb5d9;
-  --color-cyan-300: #6fd3ec;
-  --color-signal-500: #6cc24a;
-  --color-signal-400: #85d067;
+  --color-navy-950: #10243A;
+  --color-navy-900: #18334F;
+  --color-navy-800: #1E4062;
+  --color-navy-700: #224A73;
+  --color-blue-600: #07528A;
+  --color-blue-500: #0A63A3;
+  --color-cyan-400: #0796C7;
+  --color-cyan-300: #5CC3E6;
+  --color-signal-500: #36B64A;
+  --color-signal-400: #4CC65F;
   --color-slate-50: #f5f8fb;
   --color-slate-100: #eaf0f6;
   --color-slate-200: #d9e2ec;
@@ -24,8 +24,8 @@
   --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-card: 0 1px 2px rgb(11 37 69 / 0.04), 0 8px 24px -12px rgb(11 37 69 / 0.12);
-  --shadow-lift: 0 2px 4px rgb(11 37 69 / 0.05), 0 24px 48px -20px rgb(11 37 69 / 0.28);
+  --shadow-card: 0 1px 2px rgb(24 51 79 / 0.04), 0 8px 24px -12px rgb(24 51 79 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(24 51 79 / 0.05), 0 24px 48px -20px rgb(24 51 79 / 0.28);
 
   --ease-signal: cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -39,9 +39,9 @@
     100% { opacity: 0; transform: scale(1.06); }
   }
   @keyframes online {
-    0% { box-shadow: 0 0 0 0 rgb(108 194 74 / 0.55); }
-    70% { box-shadow: 0 0 0 10px rgb(108 194 74 / 0); }
-    100% { box-shadow: 0 0 0 0 rgb(108 194 74 / 0); }
+    0% { box-shadow: 0 0 0 0 rgb(54 182 74 / 0.55); }
+    70% { box-shadow: 0 0 0 10px rgb(54 182 74 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(54 182 74 / 0); }
   }
   @keyframes drift {
     0% { transform: translate3d(-4%, -2%, 0) scale(1); }
@@ -63,7 +63,7 @@
     text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4 {
-    @apply font-display text-navy-700;
+    @apply font-display text-navy-900;
     letter-spacing: -0.025em;
     text-wrap: balance;
   }
@@ -116,8 +116,8 @@
 /* Grilla técnica tenue tipo plano de red (para fondos oscuros) */
 @utility tech-grid {
   background-image:
-    linear-gradient(to right, rgb(111 211 236 / 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(111 211 236 / 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgb(92 195 230 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(92 195 230 / 0.07) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 78%);
 }
@@ -188,7 +188,7 @@
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(160deg, rgb(111 211 236 / 0.55), rgb(111 211 236 / 0.12) 45%, rgb(11 111 184 / 0.35));
+  background: linear-gradient(160deg, rgb(92 195 230 / 0.55), rgb(92 195 230 / 0.12) 45%, rgb(7 82 138 / 0.35));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;

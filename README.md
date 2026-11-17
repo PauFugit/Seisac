@@ -58,12 +58,12 @@ Los colores del logo están definidos como tokens en `app/globals.css` (`@theme`
 
 | Token        | Hex       | Uso                                                  |
 | ------------ | --------- | ---------------------------------------------------- |
-| `navy-900`   | `#0B2545` | Fondos oscuros, footer, overlay del hero            |
-| `navy-700`   | `#123E73` | Títulos                                              |
-| `blue-600`   | `#0B6FB8` | Primario, botones, links                             |
-| `blue-500`   | `#0A84C6` | Hover, acentos                                       |
-| `cyan-400`   | `#1FB5D9` | Acentos secundarios, ondas, foco                     |
-| `signal-500` | `#6CC24A` | Solo “online”, CTA de WhatsApp y puntos de énfasis   |
+| `navy-900`   | `#18334F` | Fondos oscuros, footer, overlay del hero            |
+| `navy-700`   | `#224A73` | Títulos                                              |
+| `blue-600`   | `#07528A` | Primario, botones, links                             |
+| `blue-500`   | `#0A63A3` | Hover, acentos                                       |
+| `cyan-400`   | `#0796C7` | Acentos secundarios, ondas, foco                     |
+| `signal-500` | `#36B64A` | Solo “online”, CTA de WhatsApp y puntos de énfasis   |
 | `slate-50`   | `#F5F8FB` | Fondos claros                                        |
 
 Notas de accesibilidad: los botones verdes usan **texto navy** (blanco sobre verde no cumple AA). Para texto secundario sobre fondos claros se usa `slate-600` (`slate-500` sobre `#F5F8FB` queda bajo 4.5:1).

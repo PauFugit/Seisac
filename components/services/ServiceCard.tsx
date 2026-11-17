@@ -52,7 +52,7 @@ export function ServiceCard({ service }: { service: Service }) {
         rel="noopener noreferrer"
         className="mt-7 inline-flex h-11 items-center justify-center gap-2 rounded-full border border-slate-200 px-5 text-sm font-semibold text-navy-700 transition-all duration-300 hover:border-signal-500 hover:bg-signal-500 hover:text-navy-900"
       >
-        <WhatsAppIcon className="h-4 w-4 text-[#2f7a17] transition-colors group-hover:text-current" />
+        <WhatsAppIcon className="h-4 w-4 text-[#1F7A2E] transition-colors group-hover:text-current" />
         Consultar por WhatsApp
         <span className="sr-only"> sobre {service.name} (se abre en una nueva pestaña)</span>
       </a>

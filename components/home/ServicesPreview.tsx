@@ -16,7 +16,7 @@ export function ServicesPreview() {
       {/* Halo central que realza las tarjetas */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-[radial-gradient(ellipse_at_50%_80%,rgb(11_111_184/0.28),transparent_65%)]"
+        className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-[radial-gradient(ellipse_at_50%_80%,rgb(7_82_138/0.28),transparent_65%)]"
       />
       <SignalWaves className="absolute -left-48 -top-48 -z-10 h-[600px] w-[600px] opacity-60" rings={6} />
 

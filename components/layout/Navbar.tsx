@@ -79,7 +79,7 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         solid
-          ? "border-b border-white/10 bg-navy-900/75 shadow-[0_10px_30px_-15px_rgb(7_26_51/0.6)] backdrop-blur-xl backdrop-saturate-150"
+          ? "border-b border-white/10 bg-navy-900/75 shadow-[0_10px_30px_-15px_rgb(16_36_58/0.6)] backdrop-blur-xl backdrop-saturate-150"
           : "border-b border-transparent bg-transparent"
       }`}
     >

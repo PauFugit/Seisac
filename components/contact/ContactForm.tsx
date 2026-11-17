@@ -70,7 +70,7 @@ export function ContactForm({ variant = "full" }: { variant?: "full" | "compact"
         role="status"
         className="flex flex-col items-start rounded-3xl border border-slate-200 bg-white p-8 shadow-[var(--shadow-card)] sm:p-10"
       >
-        <span className="grid h-14 w-14 place-items-center rounded-full bg-signal-500/15 text-[#2f7a17]">
+        <span className="grid h-14 w-14 place-items-center rounded-full bg-signal-500/15 text-[#1F7A2E]">
           <CircleCheck className="h-7 w-7" strokeWidth={1.75} aria-hidden="true" />
         </span>
         <h3 className="mt-6 text-2xl font-bold">¡Gracias, {sent.name.split(" ")[0]}! Recibimos tu mensaje.</h3>
@@ -172,7 +172,7 @@ export function ContactForm({ variant = "full" }: { variant?: "full" | "compact"
             defaultValue=""
             {...register("serviceType")}
             {...aria(f("serviceType"), errors.serviceType?.message)}
-            className={`${inputCls(!!errors.serviceType)} appearance-none bg-[url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B6FB8' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")] bg-[length:20px] bg-[right_14px_center] bg-no-repeat pr-11`}
+            className={`${inputCls(!!errors.serviceType)} appearance-none bg-[url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2307528A' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")] bg-[length:20px] bg-[right_14px_center] bg-no-repeat pr-11`}
           >
             <option value="" disabled>
               Selecciona una opción

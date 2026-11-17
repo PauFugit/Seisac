@@ -42,7 +42,7 @@ export function WhatsAppFloat() {
             rel="noopener noreferrer"
             aria-label="Escríbenos por WhatsApp (se abre en una nueva pestaña)"
             aria-describedby="wa-float-tip"
-            className="relative grid h-14 w-14 place-items-center rounded-full bg-signal-500 text-navy-900 shadow-[0_12px_30px_-8px_rgb(108_194_74/0.7)] transition-transform duration-300 hover:scale-105 animate-online"
+            className="relative grid h-14 w-14 place-items-center rounded-full bg-signal-500 text-navy-900 shadow-[0_12px_30px_-8px_rgb(54_182_74/0.7)] transition-transform duration-300 hover:scale-105 animate-online"
           >
             <WhatsAppIcon className="h-7 w-7" />
           </a>

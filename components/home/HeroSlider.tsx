@@ -329,9 +329,9 @@ function SlideFallback({ slide }: { slide: HeroSlide }) {
   return (
     <div className="absolute inset-0 overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700">
       <div
-        className={`hero-fallback-blob absolute ${pos} h-[70vmax] w-[70vmax] rounded-full bg-[radial-gradient(circle,rgb(31_181_217/0.35),transparent_60%)] blur-2xl`}
+        className={`hero-fallback-blob absolute ${pos} h-[70vmax] w-[70vmax] rounded-full bg-[radial-gradient(circle,rgb(7_150_199/0.35),transparent_60%)] blur-2xl`}
       />
-      <div className="hero-fallback-blob absolute bottom-[-30%] left-[20%] h-[60vmax] w-[60vmax] rounded-full bg-[radial-gradient(circle,rgb(11_111_184/0.45),transparent_60%)] blur-2xl [animation-delay:-6s]" />
+      <div className="hero-fallback-blob absolute bottom-[-30%] left-[20%] h-[60vmax] w-[60vmax] rounded-full bg-[radial-gradient(circle,rgb(7_82_138/0.45),transparent_60%)] blur-2xl [animation-delay:-6s]" />
     </div>
   );
 }

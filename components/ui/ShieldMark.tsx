@@ -13,7 +13,7 @@ export function ShieldMark({ className, tone = "color", title }: Props) {
   const shieldStroke =
     tone === "color" ? `url(#s${id})` : tone === "light" ? "#ffffff" : "currentColor";
   const waveStroke =
-    tone === "color" ? `url(#w${id})` : tone === "light" ? "#6FD3EC" : "currentColor";
+    tone === "color" ? `url(#w${id})` : tone === "light" ? "#5CC3E6" : "currentColor";
   return (
     <svg
       viewBox="0 0 64 72"
@@ -25,12 +25,12 @@ export function ShieldMark({ className, tone = "color", title }: Props) {
       {tone === "color" && (
         <defs>
           <linearGradient id={`s${id}`} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#123E73" />
-            <stop offset="1" stopColor="#0B6FB8" />
+            <stop offset="0" stopColor="#224A73" />
+            <stop offset="1" stopColor="#07528A" />
           </linearGradient>
           <linearGradient id={`w${id}`} x1="0" y1="1" x2="1" y2="0">
-            <stop offset="0" stopColor="#0B6FB8" />
-            <stop offset="1" stopColor="#1FB5D9" />
+            <stop offset="0" stopColor="#07528A" />
+            <stop offset="1" stopColor="#0796C7" />
           </linearGradient>
         </defs>
       )}
@@ -46,7 +46,7 @@ export function ShieldMark({ className, tone = "color", title }: Props) {
         <path d="M21.4 35.4a15 15 0 0 1 21.2 0" />
         <path d="M26.3 40.3a8 8 0 0 1 11.4 0" />
       </g>
-      <circle cx="32" cy="48.5" r="3.8" fill="#6CC24A" />
+      <circle cx="32" cy="48.5" r="3.8" fill="#36B64A" />
     </svg>
   );
 }
