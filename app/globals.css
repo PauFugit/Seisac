@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Tokens de marca SEISAC (colores tomados del logo)
+   ------------------------------------------------------------------ */
+@theme {
+  --color-navy-950: #071a33;
+  --color-navy-900: #0b2545;
+  --color-navy-800: #0e3060;
+  --color-navy-700: #123e73;
+  --color-blue-600: #0b6fb8;
+  --color-blue-500: #0a84c6;
+  --color-cyan-400: #1fb5d9;
+  --color-cyan-300: #6fd3ec;
+  --color-signal-500: #6cc24a;
+  --color-signal-400: #85d067;
+  --color-slate-50: #f5f8fb;
+  --color-slate-100: #eaf0f6;
+  --color-slate-200: #d9e2ec;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+
+  --font-display: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(11 37 69 / 0.04), 0 8px 24px -12px rgb(11 37 69 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(11 37 69 / 0.05), 0 24px 48px -20px rgb(11 37 69 / 0.28);
+
+  --ease-signal: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-radar: radar 4.8s var(--ease-signal) infinite;
+  --animate-online: online 2.4s ease-out infinite;
+  --animate-drift: drift 18s ease-in-out infinite alternate;
+
+  @keyframes radar {
+    0% { opacity: 0; transform: scale(0.92); }
+    30% { opacity: 1; }
+    100% { opacity: 0; transform: scale(1.06); }
+  }
+  @keyframes online {
+    0% { box-shadow: 0 0 0 0 rgb(108 194 74 / 0.55); }
+    70% { box-shadow: 0 0 0 10px rgb(108 194 74 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(108 194 74 / 0); }
+  }
+  @keyframes drift {
+    0% { transform: translate3d(-4%, -2%, 0) scale(1); }
+    100% { transform: translate3d(4%, 3%, 0) scale(1.12); }
+  }
+}
+
+/* ------------------------------------------------------------------
+   Base
+   ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white font-sans text-slate-700 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-navy-700;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+
+  :focus-visible {
+    outline: 3px solid var(--color-cyan-400);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: var(--color-cyan-400);
+    color: var(--color-navy-900);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Utilidades de marca
+   ------------------------------------------------------------------ */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@utility bg-brand-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-navy-700) 0%,
+    var(--color-blue-600) 55%,
+    var(--color-cyan-400) 100%
+  );
+}
+
+@utility text-brand-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-blue-600) 0%,
+    var(--color-blue-500) 45%,
+    var(--color-cyan-400) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Grilla técnica tenue tipo plano de red (para fondos oscuros) */
+@utility tech-grid {
+  background-image:
+    linear-gradient(to right, rgb(111 211 236 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(111 211 236 / 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 78%);
+}
+
+/* Recorte en forma de escudo (mismo perfil que el logo) */
+@utility clip-shield {
+  clip-path: polygon(
+    50% 0%, 63% 4%, 78% 7.5%, 92% 9%, 100% 10%,
+    100% 46%, 97% 60%, 90% 73%, 79% 84%, 65% 93%, 50% 100%,
+    35% 93%, 21% 84%, 10% 73%, 3% 60%, 0% 46%,
+    0% 10%, 8% 9%, 22% 7.5%, 37% 4%
+  );
+}
+
+/* Borde con degradado de marca (se activa en hover con .group) */
+@utility gradient-border {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--color-blue-600), var(--color-cyan-400), var(--color-signal-500));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.35s var(--ease-signal);
+    pointer-events: none;
+  }
+}
+
+.group:hover .group-hover-border::before,
+.group:focus-within .group-hover-border::before,
+.group-hover-border:hover::before,
+.group-hover-border:focus-visible::before {
+  opacity: 1;
+}
+
+/* Ondas que se "encienden" en hover de card */
+.wave-arc {
+  transition: opacity 0.4s var(--ease-signal), transform 0.4s var(--ease-signal);
+  transform-origin: 50% 100%;
+}
+.group:hover .wave-arc { opacity: 1; }
+.group:hover .wave-arc-1 { transition-delay: 0ms; }
+.group:hover .wave-arc-2 { transition-delay: 90ms; }
+.group:hover .wave-arc-3 { transition-delay: 180ms; }
+
+/* Fallback animado del hero cuando no hay video */
+.hero-fallback-blob {
+  animation: var(--animate-drift);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
