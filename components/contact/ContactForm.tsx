@@ -6,12 +6,16 @@ import { CircleAlert, CircleCheck, LoaderCircle, Send } from "lucide-react";
 import { useId, useState } from "react";
 import { useForm } from "react-hook-form";
 import { contactSchema, type ContactData, type ContactInput } from "@/lib/contact-schema";
+import { CITY_GROUPS, DEFAULT_CITY, OTHER_CITY } from "@/lib/cities";
 import { SERVICE_TYPE_OPTIONS } from "@/lib/services";
 import { buildFormSummaryMessage, buildWhatsAppUrl } from "@/lib/whatsapp";
 import { buttonClasses } from "@/components/ui/primitives";
 import { WhatsAppIcon } from "@/components/ui/BrandIcons";
 
 type Status = "idle" | "success" | "error";
+
+// <select> con flecha propia (la nativa se oculta con appearance-none)
+const SELECT_CLS = `appearance-none bg-[url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2307528A' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")] bg-[length:20px] bg-[right_14px_center] bg-no-repeat pr-11`;
 
 export function ContactForm({ variant = "full" }: { variant?: "full" | "compact" }) {
   const uid = useId();
@@ -31,7 +35,7 @@ export function ContactForm({ variant = "full" }: { variant?: "full" | "compact"
       name: "",
       phone: "",
       email: "",
-      city: "",
+      city: DEFAULT_CITY,
       message: "",
       preferWhatsapp: false,
       website: "",
@@ -155,15 +159,24 @@ export function ContactForm({ variant = "full" }: { variant?: "full" | "compact"
         </Field>
 
         <Field id={f("city")} label="Comuna / Ciudad" error={errors.city?.message}>
-          <input
+          <select
             id={f("city")}
-            type="text"
             autoComplete="address-level2"
-            placeholder="Ej.: Talca"
             {...register("city")}
             {...aria(f("city"), errors.city?.message)}
-            className={inputCls(!!errors.city)}
-          />
+            className={`${inputCls(!!errors.city)} ${SELECT_CLS}`}
+          >
+            {CITY_GROUPS.map((g) => (
+              <optgroup key={g.region} label={`Región ${g.region === "Metropolitana" ? "Metropolitana" : `de ${g.region}`}`}>
+                {g.cities.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+            <option value={OTHER_CITY}>{OTHER_CITY}</option>
+          </select>
         </Field>
 
         <Field id={f("serviceType")} label="Tipo de servicio" required error={errors.serviceType?.message} full>
@@ -172,7 +185,7 @@ export function ContactForm({ variant = "full" }: { variant?: "full" | "compact"
             defaultValue=""
             {...register("serviceType")}
             {...aria(f("serviceType"), errors.serviceType?.message)}
-            className={`${inputCls(!!errors.serviceType)} appearance-none bg-[url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2307528A' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")] bg-[length:20px] bg-[right_14px_center] bg-no-repeat pr-11`}
+            className={`${inputCls(!!errors.serviceType)} ${SELECT_CLS}`}
           >
             <option value="" disabled>
               Selecciona una opción
