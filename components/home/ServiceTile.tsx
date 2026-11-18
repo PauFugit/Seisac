@@ -49,10 +49,15 @@ export function ServiceTile({
       />
 
       <div className="flex items-start justify-between">
-        <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-brand-gradient text-white shadow-[0_10px_28px_-8px_rgb(7_150_199/0.7)] ring-1 ring-white/20 transition-transform duration-500 group-hover:scale-105">
+        <span className="relative grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-blue-600 from-5% via-cyan-400 via-40% to-signal-500 to-90% text-white shadow-[0_10px_28px_-8px_rgb(54_182_74/0.65)] ring-1 ring-signal-500/50 transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_12px_32px_-6px_rgb(54_182_74/0.85)]">
           <span
             aria-hidden="true"
-            className="absolute inset-0 rounded-2xl ring-2 ring-cyan-300/50 transition-all duration-700 group-hover:scale-[1.35] group-hover:opacity-0"
+            className="absolute inset-0 rounded-2xl ring-2 ring-signal-500/60 transition-all duration-700 group-hover:scale-[1.35] group-hover:opacity-0"
+          />
+          {/* Punto "online" verde */}
+          <span
+            aria-hidden="true"
+            className="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-signal-500 ring-2 ring-navy-900 animate-online"
           />
           <Icon name={icon} className="h-7 w-7" strokeWidth={1.6} />
         </span>
